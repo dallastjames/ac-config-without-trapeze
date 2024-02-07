@@ -5,7 +5,7 @@
   "homepage": "https://ionicframework.com/",
   "scripts": {
     "assets": "capacitor-assets generate --iconBackgroundColor '#f4f5f8' --splashBackgroundColor '#f4f5f8' --iconBackgroundColorDark '#222428' --splashBackgroundColorDark '#222428'",
-    "build": "npm run clean && npm run config && ng build && cap sync",
+    "build": "ng build && cap sync",
     "clean": "git checkout android/app/build.gradle android/app/src/main/AndroidManifest.xml ios/App/App/Info.plist",
     "config": "(export $(cat .env | xargs); npm run clean; node scripts/buildConfig.js ; npm run trapeze)",
     "e2e": "ng e2e",
